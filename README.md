@@ -2,7 +2,6 @@
 
 A modern, responsive portfolio website built with Next.js and TailwindCSS, designed specifically for AWS Cloud Architects to showcase their expertise, certifications, and projects.
 
-![Portfolio Preview](/placeholder.svg)
 
 ## Features
 
@@ -33,32 +32,32 @@ Before you begin, ensure you have the following installed:
 ## Getting Started
 
 1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/yourusername/cloud-architect-portfolio.git
-cd cloud-architect-portfolio
-\`\`\`
+
+git clone https://github.com/jorgealerojas/ai-portfolio-project.git
+cd ai-portfolio-project
+
 
 2. Install dependencies:
-\`\`\`bash
+
 npm install
-\`\`\`
+
 
 3. Create a `.env.local` file in the root directory and add any necessary environment variables:
-\`\`\`bash
+
 NEXT_PUBLIC_SITE_URL=your-site-url
-\`\`\`
+
 
 4. Run the development server:
-\`\`\`bash
+
 npm run dev
-\`\`\`
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Project Structure
 
-\`\`\`
-cloud-architect-portfolio/
+
+ai-portfolio-project/
 ├── app/                    # Next.js app directory
 │   ├── components/        # React components
 │   ├── context/          # React context providers
@@ -67,7 +66,7 @@ cloud-architect-portfolio/
 ├── public/               # Static files
 ├── styles/              # Global styles
 └── components/          # Shared components
-\`\`\`
+
 
 ## Customization
 
@@ -95,24 +94,11 @@ The easiest way to deploy your portfolio is to use [Vercel](https://vercel.com):
 3. Vercel will detect it as a Next.js app and set up the build configuration automatically
 4. Your site will be deployed to a URL like \`https://your-portfolio.vercel.app\`
 
-\`\`\`bash
+
 npm i -g vercel
 vercel
-\`\`\`
 
-### Other Deployment Options
 
-You can also deploy to other platforms that support Next.js:
-
-1. Build the project:
-\`\`\`bash
-npm run build
-\`\`\`
-
-2. Start the production server:
-\`\`\`bash
-npm start
-\`\`\`
 
 ## Contributing
 
@@ -128,19 +114,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/cloud-architect-portfolio](https://github.com/yourusername/cloud-architect-portfolio)
-
-## Acknowledgments
-
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [Lucide Icons](https://lucide.dev/) for the icons
-- [TailwindCSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Next.js](https://nextjs.org/) for the awesome React framework
-\`\`\`
 
 Remember to:
 1. Replace placeholder URLs with your actual repository and deployment URLs
