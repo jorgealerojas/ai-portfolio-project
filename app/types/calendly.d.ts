@@ -30,6 +30,9 @@ declare module "react-calendly" {
       utmTerm?: string
       [key: string]: string | undefined
     }
+    text?: string
+    color?: string
+    rootElement?: HTMLElement
   }
 
   export const InlineWidget: React.FC<CalendlyProps>
