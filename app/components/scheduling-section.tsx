@@ -7,27 +7,19 @@ import { Calendar } from "lucide-react"
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 
-interface CalendlyPopupWidget {
-  url: string;
-  text?: string;
-  color?: string;
-  textColor?: string;
-  rootElement?: HTMLElement;
-}
-
 // Dynamically import Calendly to avoid SSR issues
-const PopupWidget = dynamic<FC<CalendlyPopupWidget>>(
-  () => import('react-calendly').then((mod) => mod.PopupWidget),
-  { ssr: false }
-)
-
-declare global {
-  interface Window {
-    Calendly: {
-      initPopupWidget: (options: { url: string }) => void;
-    };
-  }
+const { PopupWidget, openPopupWidget } = {
+  PopupWidget: dynamic(
+    () => import('react-calendly').then((mod) => mod.PopupWidget),
+    { ssr: false }
+  ),
+  openPopupWidget: dynamic(
+    () => import('react-calendly').then((mod) => mod.openPopupWidget),
+    { ssr: false }
+  )
 }
+
+const CALENDLY_URL = "https://calendly.com/your-username"
 
 const SchedulingSection: FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -35,6 +27,12 @@ const SchedulingSection: FC = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleScheduleClick = () => {
+    if (typeof window !== 'undefined') {
+      openPopupWidget({ url: CALENDLY_URL })
+    }
+  }
 
   return (
     <Card className="p-6">
@@ -48,13 +46,7 @@ const SchedulingSection: FC = () => {
         <Button 
           className="flex items-center gap-2" 
           size="lg"
-          onClick={() => {
-            if (typeof window !== 'undefined') {
-              window.Calendly.initPopupWidget({
-                url: 'https://calendly.com/your-username'
-              });
-            }
-          }}
+          onClick={handleScheduleClick}
         >
           <Calendar className="h-4 w-4" />
           Schedule a Consultation
@@ -62,7 +54,7 @@ const SchedulingSection: FC = () => {
       </div>
       {mounted && (
         <PopupWidget
-          url="https://calendly.com/your-username"
+          url={CALENDLY_URL}
           rootElement={typeof window !== 'undefined' ? document.getElementById("__next") : undefined}
           text="Schedule a Consultation"
           textColor="#ffffff"
