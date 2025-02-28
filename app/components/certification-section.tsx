@@ -27,7 +27,7 @@ export default function CertificationSection() {
     <section className="py-12 md:py-24 lg:py-32 bg-muted/50">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
-          AWS Certifications
+          Certifications
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           {certifications.map((cert) => (

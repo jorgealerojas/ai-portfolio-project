@@ -3,15 +3,15 @@ import { Card } from "@/components/ui/card"
 const technologies = [
   {
     category: "Cloud Platforms",
-    skills: ["AWS", "Google Cloud", "Azure", "VMware Cloud", "Hybrid Cloud"],
+    skills: ["AWS", "Google Cloud", "Azure"],
   },
   {
     category: "Infrastructure as Code",
-    skills: ["Terraform", "CloudFormation", "AWS CDK", "Ansible", "Pulumi"],
+    skills: ["Terraform", "CloudFormation", "AWS CDK"],
   },
   {
     category: "AWS Services",
-    skills: ["EC2", "EKS", "Lambda", "RDS", "CloudFront", "Route53", "IAM"],
+    skills: ["ECS", "EKS", "EC2", "Lambda", "DynamoDB", "Bedrock", "RDS", "CloudFront", "S3", "IAM"],
   },
   {
     category: "DevOps & Tools",
@@ -19,7 +19,7 @@ const technologies = [
   },
   {
     category: "Monitoring & Security",
-    skills: ["CloudWatch", "AWS Config", "GuardDuty", "Security Hub", "WAF"],
+    skills: ["CloudWatch", "AWS Config", "GuardDuty", "Security Hub", "WAF", "Cloudtrail",
   },
   {
     category: "Cost Management",

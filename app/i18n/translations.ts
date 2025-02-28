@@ -71,7 +71,7 @@ export const translations = {
       title: "Tech Stack",
     },
     certifications: {
-      title: "AWS Certifications",
+      title: "Certifications",
       verify: "Verify Certificate",
       issued: "Issued",
     },
