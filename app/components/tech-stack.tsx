@@ -19,7 +19,7 @@ const technologies = [
   },
   {
     category: "Monitoring & Security",
-    skills: ["CloudWatch", "AWS Config", "GuardDuty", "Security Hub", "WAF", "Cloudtrail",
+    skills: ["CloudWatch", "AWS Config", "GuardDuty", "Security Hub", "WAF", "Cloudtrail"],
   },
   {
     category: "Cost Management",
