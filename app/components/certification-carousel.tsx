@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Image from "next/image"
+import { useLanguage } from "../context/language-context"
 
 const certifications = [
   {
@@ -26,6 +27,8 @@ const certifications = [
 ]
 
 export default function CertificationCarousel() {
+  const { t } = useLanguage()
+
   return (
     <Carousel
       opts={{
@@ -36,10 +39,10 @@ export default function CertificationCarousel() {
     >
       <CarouselContent>
         {certifications.map((cert, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card className="bg-[#232f3e] dark:bg-[#232f3e]">
-                <CardContent className="flex flex-col items-center p-6">
+          <CarouselItem key={index} className="flex md:basis-1/2 lg:basis-1/3">
+            <div className="h-full w-full p-1">
+              <Card className="h-full bg-[#232f3e] dark:bg-[#232f3e]">
+                <CardContent className="flex h-full flex-col items-center p-6">
                   <div className="relative w-40 h-40 mb-4 bg-transparent">
                     <Image 
                       src={cert.image} 
@@ -49,15 +52,19 @@ export default function CertificationCarousel() {
                       priority 
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-center mb-2 text-white">{cert.title}</h3>
-                  <p className="text-sm text-gray-300 mb-4">Issued {cert.issueDate}</p>
+                  <h3 className="mb-2 flex min-h-[84px] items-center text-center text-lg font-semibold text-white">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm text-gray-300 mb-4">
+                    {t("certifications.issued")} {cert.issueDate}
+                  </p>
                   <a
                     href={cert.verificationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#ff9900] hover:text-[#ffac31] hover:underline"
+                    className="mt-auto text-sm text-[#ff9900] hover:text-[#ffac31] hover:underline"
                   >
-                    Verify Certificate
+                    {t("certifications.verify")}
                   </a>
                 </CardContent>
               </Card>
@@ -70,4 +77,3 @@ export default function CertificationCarousel() {
     </Carousel>
   )
 }
-

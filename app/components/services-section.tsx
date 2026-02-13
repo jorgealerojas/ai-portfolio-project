@@ -6,7 +6,7 @@ import { useLanguage } from "../context/language-context"
 
 export default function ServicesSection() {
   const { t } = useLanguage()
-  const services = t("services.items")
+  const services = t("services.items") as unknown as Array<{ title: string; description: string }>
 
   const icons = {
     "Cloud Architecture Design": Cloud,
@@ -47,4 +47,3 @@ export default function ServicesSection() {
     </section>
   )
 }
-

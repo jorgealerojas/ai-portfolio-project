@@ -50,7 +50,12 @@ export default function ProjectCard({ title, description, image, link, tags, cer
         )}
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Link href={link} target="_blank" className="inline-flex items-center gap-2 text-sm hover:underline">
+        <Link
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm hover:underline"
+        >
           <Github className="h-4 w-4" />
           View on GitHub
         </Link>
@@ -58,4 +63,3 @@ export default function ProjectCard({ title, description, image, link, tags, cer
     </Card>
   )
 }
-

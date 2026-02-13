@@ -11,6 +11,31 @@ export const translations = {
       subtitle:
         "Specialized in cloud cost optimization, infrastructure design, and multi-cloud solutions. Helping businesses architect scalable, secure, and cost-effective cloud environments.",
     },
+    home: {
+      badge: "Freelance Cloud Architect Consultant",
+      ctaPrimary: "Schedule a Consultation",
+      ctaSecondary: "See Case Studies",
+      servicesSubtitle: "High-impact consulting services for cloud delivery, resilience, and cost control.",
+      projectsSubtitle: "Selected engagements with measurable outcomes across migration, optimization, and operations.",
+      techSubtitle: "Tools and platforms I use to ship reliable, secure, and cost-efficient cloud systems.",
+      techCloudPlatforms: "Cloud Platforms",
+      techIaC: "Infrastructure as Code",
+      techDevOps: "Containers & DevOps",
+      techGovernance: "Cost & Governance",
+      certSubtitle: "Verified AWS credentials with direct public validation links.",
+      focusTitle: "Engagement Focus",
+      focusArchitectureTitle: "Architecture",
+      focusArchitectureText: "Scalable AWS platform design",
+      focusFinopsTitle: "FinOps",
+      focusFinopsText: "Continuous spend reduction and governance",
+      focusSecurityTitle: "Security",
+      focusSecurityText: "IAM hardening, compliance controls, best practices",
+      focusMulticloudTitle: "Multi-cloud",
+      focusMulticloudText: "Hybrid strategy when business constraints require it",
+      directContactTitle: "Direct Contact",
+      asyncTitle: "Prefer async?",
+      asyncText: "Send your architecture goals, constraints, and timeline. I can propose a focused discovery plan.",
+    },
     services: {
       title: "Services",
       items: [
@@ -97,6 +122,31 @@ export const translations = {
       subtitle:
         "Especializado en optimización de costos en la nube, diseño de infraestructura y soluciones multi-cloud. Ayudando a empresas a arquitectar entornos en la nube escalables, seguros y rentables.",
     },
+    home: {
+      badge: "Consultor Freelance de Arquitectura Cloud",
+      ctaPrimary: "Agendar una Consulta",
+      ctaSecondary: "Ver Casos de Estudio",
+      servicesSubtitle: "Servicios de consultoría de alto impacto para entrega cloud, resiliencia y control de costos.",
+      projectsSubtitle: "Proyectos seleccionados con resultados medibles en migración, optimización y operaciones.",
+      techSubtitle: "Herramientas y plataformas que utilizo para entregar sistemas cloud confiables, seguros y eficientes en costos.",
+      techCloudPlatforms: "Plataformas Cloud",
+      techIaC: "Infraestructura como Código",
+      techDevOps: "Contenedores y DevOps",
+      techGovernance: "Costos y Gobernanza",
+      certSubtitle: "Credenciales AWS verificadas con enlaces públicos de validación directa.",
+      focusTitle: "Enfoque de Trabajo",
+      focusArchitectureTitle: "Arquitectura",
+      focusArchitectureText: "Diseño de plataformas AWS escalables",
+      focusFinopsTitle: "FinOps",
+      focusFinopsText: "Reducción continua de costos y gobernanza",
+      focusSecurityTitle: "Seguridad",
+      focusSecurityText: "Fortalecimiento de IAM, controles de cumplimiento y buenas prácticas",
+      focusMulticloudTitle: "Multi-cloud",
+      focusMulticloudText: "Estrategia híbrida cuando el negocio lo requiere",
+      directContactTitle: "Contacto Directo",
+      asyncTitle: "¿Prefieres asíncrono?",
+      asyncText: "Envíame tus objetivos, restricciones y tiempos. Puedo proponerte un plan de descubrimiento enfocado.",
+    },
     services: {
       title: "Servicios",
       items: [
@@ -177,4 +227,3 @@ export const translations = {
 
 export type Language = "en" | "es"
 export type TranslationKey = keyof typeof translations.en
-
